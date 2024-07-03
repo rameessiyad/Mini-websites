@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volkswagen</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body>
+    <!-- header starts -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="navbar">
+                <i class="fa-solid fa-bars" id="menuIcon" onclick="showNav()"></i>
+                <ul class="menu" id="menus">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- header ends -->
+
+    <!-- info img layout starts -->
+    <main>
+        <div class="info-img-layout">
+            <div class="container">
+                <div class="flex-wrapper">
+                    <div class="img-wrapper">
+                        <img src="./images/about2.jpg" alt="info image">
+                    </div>
+                    <div class="info-wrapper">
+                        <h2>Enjoy our <span>Special offers</span></h2>
+                        <h3>German engineering, Middle Ease prices</h3>
+                        <p>A redefined marvel of unprecedented performance, The Volkswagen TSI oozes an untamed 110hp.
+                            And
+                            yet, at 17.69 km/litre on the Vento, and 16.25km/litre on the Vento automatic doesn't
+                            irresponsibly guzzle fuel.
+                        </p>
+                        <a href="https://www.volkswagen.co.in/en/owners-and-services.html" class="cta-btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- info img layout ends -->
+
+    <!-- info img layout 2 starts -->
+    <main>
+        <div class="info-img-layout with-bg">
+            <div class="container">
+                <div class="flex-wrapper position-reset">
+                    <div class="img-wrapper">
+                        <img src="./images/about1.jpg" alt="info image">
+                    </div>
+                    <div class="info-wrapper">
+                        <h3>0% financing for 24 months</h3>
+                        <h2>Drive away with a new <span>Volkswagen</span></h2>
+                        <p>A redefined marvel of unprecedented performance, The Volkswagen TSI oozes an untamed 110hp.
+                            And
+                            yet, at 17.69 km/litre on the Vento, and 16.25km/litre on the Vento automatic doesn't
+                            irresponsibly guzzle fuel.
+                        </p>
+                        <a href="https://www.volkswagen.co.in/en/owners-and-services.html" class="cta-btn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- info img layout 2 ends -->
+
+    <!-- font awesome cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // mobile menu
+        let mobileMenuIcon = document.getElementById('menuIcon')
+        let menu = document.getElementById('menus')
+
+        const showNav = () => {
+            menu.classList.toggle('open')
+        }
+    </script>
+</body>
+
+</html>

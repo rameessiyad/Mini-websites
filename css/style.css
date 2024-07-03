@@ -1,0 +1,277 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    padding: 25px 78px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1)30%, rgba(0, 0, 0, 0)100%);
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    header {
+        padding: 20px 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    header {
+        padding: 20px;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 79px;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    font-weight: 400;
+    transition: all 0.4s ease-in-out;
+}
+
+@media(max-width: 767px) {
+    .navbar .menu {
+        display: block;
+        height: 100vh;
+        transform: translateX(120%);
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        padding: 30px 0;
+    }
+
+    .navbar .menu.open {
+        transform: translateX(0);
+    }
+
+}
+
+.navbar .fa-bars {
+    display: none;
+}
+
+@media(max-width: 767px) {
+    .navbar .fa-bars {
+        display: block;
+        font-size: 28px;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 22px;
+    padding: 10px 8px;
+    margin: 0 20px;
+    transition: all .3s ease-in;
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .navbar a {
+        margin: 0 12px;
+    }
+}
+
+@media(max-width: 767px) {
+    .navbar a {
+        display: block;
+        padding: 10px 0;
+        margin: 23px;
+    }
+}
+
+.navbar li:last-child a {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.navbar li:hover a {
+    color: #f70142;
+}
+
+.navbar li.active a {
+    border-bottom: 2px solid #f70142;
+}
+
+@media(max-width: 767px) {
+    .navbar li.active a {
+        border-bottom: 0;
+    }
+}
+
+/* hero section */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100vh;
+}
+
+@media(max-width: 767px) {
+    .hero img {
+        object-fit: cover;
+    }
+}
+
+.hero .hero-info {
+    max-width: 405px;
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    transform: translateY(-50%);
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .hero .hero-info {
+        left: 20px;
+        top: auto;
+        bottom: 70px;
+    }
+}
+
+@media(max-width: 767px) {
+    .hero .hero-info {
+        left: 30px;
+        top: auto;
+        bottom: 0px;
+    }
+}
+
+.hero .hero-info h1 {
+    color: #fff;
+    font-size: 74px;
+    font-weight: 700;
+    line-height: 74px;
+    margin-bottom: 32px;
+}
+
+@media(min-width: 768px)and (max-width: 991px) {
+    .hero .hero-info h1 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+
+@media(max-width: 767px) {
+    .hero .hero-info h1 {
+        font-size: 44px;
+        line-height: 53px;
+    }
+}
+
+.hero .hero-info h1 span {
+    font-size: 38px;
+    font-weight: 400;
+    display: block;
+}
+
+@media(max-width: 767px) {
+    .hero .hero-info h1 span {
+        font-size: 25px;
+    }
+}
+
+.hero .hero-info .cta-btn {
+    background: #f70142;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 24px;
+    transition: background-color .3s ease-in;
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .hero .hero-info .cta-btn {
+        font-size: 18px;
+        padding: 11px 16px;
+    }
+}
+
+@media(max-width: 767px) {
+    .hero .hero-info .cta-btn {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+}
+
+.hero .hero-info .cta-btn:hover {
+    background-color: black;
+}
+
+/* hero swiper css */
+.hero .swiper {
+    height: 100vh;
+    position: relative;
+}
+
+.hero .swiper-slide::before {
+    content: '';
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+}
+
+
+.hero .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .swiper-pagination {
+    position: absolute;
+    bottom: 50px;
+    left: auto;
+    right: 0;
+    text-align: right;
+    padding-right: 40px;
+}
+
+
+.hero .swiper-pagination .swiper-pagination-bullet {
+    width: 23px;
+    height: 23px;
+    background: transparent;
+    border: 2px solid white;
+    opacity: 1;
+    outline: none;
+}
+
+.hero .swiper-pagination .swiper-pagination-bullet-active {
+    border: 2px solid red;
+}
